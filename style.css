@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+*{
+    padding: 0;
+    margin:0;
+    box-sizing: border-box;
+    font-size:16px;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color:  hsl(217, 54%, 11%);
+    font-family: 'Outfit','serif';
+    color:hsla(0, 0%, 100%,.5);
+    font-weight: 300;
+    font-size: 1rem;
+    min-height:100vh;
+    padding:2rem 1rem;
+}
+img{
+    width:100%;
+}
+.card{
+    background-color: hsl(216, 50%, 16%);
+
+    max-width:20rem;
+    display: flex;
+    flex-direction: column;
+    padding:1rem 1.5rem;
+    border-radius:15px;
+    line-height: 1.2;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.4);
+    animation:grow 0.8s ease-in;
+    -webkit-animation:grow 0.8s ease-in;
+}
+.card__content{
+    margin-bottom: .7rem;
+}
+.card__image{
+    width:100%;
+    border-radius:11px;
+    overflow: hidden;
+    margin-bottom: 1.5em;
+}
+.card__heading{
+    font-size: 1.3rem;
+    color:hsl(0, 0%, 100%);
+    font-weight: 400;
+    margin-bottom: 1rem;
+}
+.card__description{
+    margin-bottom: 1rem;
+}
+.card__stock{
+    display:flex;
+    justify-content: space-between;
+    margin-bottom: 1.2em;
+}
+.card__stock img{
+    width:19%;
+}
+.card-quantity{
+    display: flex;
+    align-items: center;
+}
+.card-quantity h2{
+    color:hsl(178, 100%, 50%);
+    font-weight: 400;
+    margin-left: .4em;
+    font-size: .95rem;
+}
+.card-days{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.card-days h2{
+    font-size: .95rem;
+   margin-left: .2em;
+   font-weight: 400;
+}
+.card__footer{
+    border-top:2px solid hsla(215, 32%, 27%,.7);
+    padding-top:1rem;
+    display: flex;
+    align-items: center;
+}
+
+.card__footer img{
+    width:12%;
+    outline:2px solid #fff;
+    border-radius: 50px;
+    margin-right:1rem;
+}
+.card__footer h3{
+    font-weight: 100;
+}
+.card__footer span{
+    color:hsl(0, 0%, 100%);
+    
+}
+@media (max-width: 450px) {
+    .card{
+        max-width: 23rem;
+    }
+}
+@keyframes grow{
+    0%{
+        opacity:0;
+        transform:scale(0.5);
+    }
+    100%{
+        opacity:1;
+        transform:scale(1);
+    }
+}
